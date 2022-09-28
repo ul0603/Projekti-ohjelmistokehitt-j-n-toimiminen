@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>	
-   <meta charset="utf-8"/>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    <title>AMISPADEL</title>
 </head>
 <body> 
@@ -50,15 +54,81 @@
         margin-left: auto;
         margin-right: auto;
         }
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+.all-browsers {
+  margin: 0;
+  padding: 5px;
+  background-color: lightgray;
+}
+
+.all-browsers > h1, .browser {
+  margin: 10px;
+  padding: 5px;
+}
+
+.browser {
+  background: white;
+}
+
+.browser > h2, p {
+  margin: 4px;
+  font-size: 90%;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
     </style>
         </head>
         <body>
+          <ul>
+            <li><a class="active" href="#home">Amispadel</a></li>
+            
+            <li style="float:right"><a href="lisaatauluun.html">Ilmoittautuminen</a></li>
+            <li style="float:right"><a href="lisaailmoittautuja.html">Uutiset</a></li>
+          </ul>
+          
         
         <div class="hero-image">
           <div class="hero-text">
             <h1 style="font-size:70px">AMISPADEL</h1>
             <p style="font-size:50px">Täällä nyt</p>
-            <button style ="font-size:45px">Ilmottaudu nyt</button>
+            <a href="lisaatauluun.html">
+            <button style ="font-size:45px">Ilmottaudu nyt</button></a>
           </div>
         </div>
         
@@ -67,11 +137,11 @@
        
 
         <h1 style="text-align:center">Yleistä</h1>
-        <p style="text-align:center">Uusi Amispadel avataan keväällä 2025!</p>
+        <h3 style="text-align:center">Uusi Amispadel avataan keväällä 2025!</h3>
         <br>
-        <p style="text-align:center">Se sijaitsee Kukkulakuja 5:ssä</p>
+        <h3 style="text-align:center">Se sijaitsee Kukkulakuja 5:ssä</h3>
         <br>
-        <p style="text-align:center">ja se on auki arkisin 8-19 ja lauantaisin 10-19</p>
+        <h3 style="text-align:center">ja se on auki arkisin 8-19 ja lauantaisin 10-19</h3>
         <br>
     
     <h2 style="text-align:center">Palvelut</h2>
@@ -80,20 +150,20 @@
             <button class="tablinks" onclick="openCity(event, 'Peruskurssi')">Peruskurssi</button>
             <button class="tablinks" onclick="openCity(event, 'Harrastejaosto')">Harrastejaosto</button>
             <button class="tablinks" onclick="openCity(event, 'Kilpaosasto')">Kilpaosasto</button>
-        </div>
+        </div><br>
     
     <div id="Peruskurssi" class="tabcontent">
-      <h3 style="text-align:center">Peruskurssi</h3>
-      <p style="text-align:center">Peruskurssia pidetään maanantaisin ja torstaisin klo 18.</p>
+      <h2 style="text-align:center">Peruskurssi</h2>
+      <h3 style="text-align:center">Peruskurssia pidetään maanantaisin ja torstaisin klo 18.</h3><br>
     </div>
     
     <div id="Harrastejaosto" class="tabcontent">
-      <h3 style="text-align:center">Harrastejaosto</h3>
-      <p style="text-align:center">Harrastejaosto kokoontuu tiistaisin ja perjantaisin klo 19.</p> 
+      <h2 style="text-align:center">Harrastejaosto</h2>
+      <h3 style="text-align:center">Harrastejaosto kokoontuu tiistaisin ja perjantaisin klo 19.</h3><br> 
     </div>
     <div id="Kilpaosasto" class="tabcontent">
-      <h3 style="text-align:center">Kilpaosasto</h3>
-      <p style="text-align:center">Kilpailujaosto kokoontuu perjantaisin, lauantaisin ja sunnuntaisin klo 16</p>
+      <h2 style="text-align:center">Kilpaosasto</h2>
+      <h3 style="text-align:center">Kilpailujaosto kokoontuu perjantaisin, lauantaisin ja sunnuntaisin klo 16</h3><br>
     </div>
     
     <script>
@@ -112,28 +182,43 @@
     }
     </script>
 
-    <table style="width:100%">
-        <tr>
-            <td><img src="jess.jpg" width="170" height="150" class="center"></td>
-            <td><img src="herra.jpg" width="170" height="150" class="center"></td>
-            <td><img src="jab.jpg" width="170" height="150" class="center"></td>
-        </tr>
-        <tr>
-            <th>Peruskurssin opettaja</th>
-            <th>Harrastejaoston ohjaaja</th>
-            <th>Kilpailujaoston valmentaja</th>
-        </tr>
-        <tr>
-            <td style="text-align:center"></tdstyle>Linus Tectips</td>
-            <td style="text-align:center"></tdstyle>Marques Brownlee</td>
-            <td style="text-align:center"></tdstyle>Dmitri </td>
-        </tr>
-        <tr>
-            <td style="text-align:center"></tdstyle>16</td>
-            <td style="text-align:center"></tdstyle>14</td>
-            <td style="text-align:center"></tdstyle>10</td>
-        </tr>
-    </table>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="jess.jpg" target="_blank">
+          <img src="jess.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <h3>Peruskurssin opettaja <br> Linus Tectips</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="herra.jpg" target="_blank">
+          <img src="herra.jpg" alt="Nature" style="width:100%">
+          <div class="caption">
+            <h3>Harrastejaoston ohjaaja <br> Marquees Brownlee</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="jab.jpg" target="_blank">
+          <img src="jab.jpg" alt="Fjords" style="width:100%">
+          <div class="caption">
+            <h3>Kilpajaoston valmentaja <br> Dimitrevina Sent.</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>Aaro ja Uljas<br>
+</footer>
        
     </body>
 </html>
