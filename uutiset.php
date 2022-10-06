@@ -16,7 +16,8 @@ try {
 $tulos = $kysely->fetchAll();
 foreach($tulos as $rivi) {     
  // Taulussa on oltava sarakenimet Sukunimi, Etunimi jne
- echo $rivi['Otsikko'] . "<br>" . $rivi['julkaisu'] . "<br>" . $rivi['leipateksti'] . "<br>" . "<br>" . $rivi['Otsikko2'] . "<br>"
-   . $rivi['julkaisu2'] . "<br>" . $rivi['leipateksti2'] . "<br>" . "<br>" . $rivi['Otsikko3'] . "<br>" . $rivi['julkaisu3'] . "<br>" . $rivi['leipateksti3'] ."<br>";       
+ echo $rivi['Otsikko'] . "<br>" . $rivi['julkaisu'] . "<br>" . $rivi['leipateksti'] . "<br>"  . "<br>" . "<br>" . "<br>"; 
+ echo $rivi['Otsikko2'] . "<br>" . $rivi['julkaisu2'] . "<br>" . $rivi['leipateksti2'] . "<br>" . "<br>" . "<br>" . "<br>";
+ echo $rivi['Otsikko3'] . "<br>" . $rivi['julkaisu3'] . "<br>" . $rivi['leipateksti3'] ."<br>" . "<br>";       
 } 
 ?>  

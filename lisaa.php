@@ -24,6 +24,8 @@ $sql = "INSERT INTO tiedot (etunimi, sukunimi, sahkoposti, koulutalo, kurssi, te
 try { 
 		$kysely = $yhteys->prepare($sql); 
 		$kysely->execute(); 
+		echo "Tiedot on nyt lähetetty AMISPADELin tietokantaan.";
+		echo "Kiitos mielenkiinnosta!";
 	} catch (PDOException $e) { 
 	die("VIRHE NRO 2: " . $e->getMessage()); 
 } 
